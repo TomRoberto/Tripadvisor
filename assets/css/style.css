@@ -49,7 +49,7 @@ header {
   position: fixed;
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
   background-color: white;
 }
 
@@ -82,6 +82,16 @@ header button {
 
 main {
   padding-top: 103px;
+}
+
+.btn-display-form {
+  margin: 20px 0;
+  background-color: #429c90;
+  border-radius: 10px;
+  border: #429c90;
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
 }
 
 /* premier nav */
@@ -426,11 +436,78 @@ footer a {
   color: #ff5e5e;
   text-decoration: none;
 }
+
+/* MODAL*/
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  height: 80%;
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  display: flex;
+}
+
+.close button {
+  margin: 10px;
+  border: solid #058171 2px;
+  cursor: pointer;
+}
+
+.form input {
+  width: 50%;
+  height: 30px;
+  margin: 20px 0;
+  font-family: inherit;
+  border: solid #058171 2px;
+}
+.form p {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.form textarea {
+  font-family: inherit;
+  margin-top: 20px;
+  width: 50%;
+  border: solid #058171 2px;
+}
+
+.form input:last-child {
+  background-color: #058171;
+  color: white;
+  cursor: pointer;
+}
 /* HIDDEN */
 
 .hidden {
   display: none;
 }
+
+/* UNHIDDEN */
+
+.display {
+  display: flex;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1184px) {

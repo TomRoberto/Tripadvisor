@@ -11,6 +11,8 @@
       src="https://kit.fontawesome.com/cdf6dca466.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/JS/main.js"></script>
     <title>Tripadvisor</title>
   </head>
   <body>
@@ -31,13 +33,47 @@
           <div><i class="far fa-heart"></i><span>&nbsp;Favoris</span></div>
           <div><button>Connectez-vous</button></div>
         </nav>
+        <div>
+          <button class="btn-display-form" id="btn-display-form">
+            Contactez-nous !
+          </button>
+        </div>
       </div>
     </header>
+
+    <!-- MODAL -->
+
+    <div class="modal hidden" id="modal">
+      <form class="form" id="form">
+        <div class="close">
+          <button id="btn-close-form">Close X</button>
+        </div>
+        <p>Formulaire de contact</p>
+        <input type="text" placeholder="Name" id="name" name="name" />
+        <input
+          type="text"
+          placeholder="Last Name"
+          id="lastname"
+          name="lastname"
+        />
+        <input type="email" placeholder="Email" id="email" name="email" />
+        <input type="text" placeholder="Subject" id="subject" name="subject" />
+        <textarea
+          name="message"
+          id="message"
+          cols="40"
+          rows="5"
+          placeholder="Ecrivez votre message ici"
+        ></textarea>
+        <input id="submit" type="submit" value="Envoyer le formulaire" />
+      </form>
+    </div>
 
     <!-- MAIN -->
 
     <main class="container">
       <!-- under the header -->
+
       <h1><span class="explorez">Explorez</span> Paris</h1>
       <nav class="rectangles">
         <div>
