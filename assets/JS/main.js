@@ -24,7 +24,12 @@ $.addEventListener("DOMContentLoaded", () => {
     };
     console.log(data);
     try {
-      const response = await axios.post("http://localhost:3000/form", data);
+      const response = await axios.post(
+        "https://lereacteur-tripadvisor-backend.herokuapp.com/form",
+        data
+      );
+      console.log(response);
+      alert("Merci pour votre formulaire");
     } catch (error) {
       console.log(error.message);
     }
