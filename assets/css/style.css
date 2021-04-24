@@ -1,0 +1,606 @@
+/* VARIABLES */
+
+:root {
+  --geo-color: #333333;
+  --geo-size: 18px;
+  --geo-font: Georgia, "Times New Roman", Times, serif;
+  --little-color: #333333;
+  --little-size: 14px;
+}
+
+/* GENERAL */
+body {
+  font-family: "Trip Sans Reg", sans-serif;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: "Trip Sans Med";
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: "Trip Sans Med";
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: "Trip Sans Med";
+}
+
+/* HEADER */
+
+header img {
+  height: 100px;
+}
+header {
+  height: 105px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background-color: white;
+}
+
+.center-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1140px;
+
+  background-color: white;
+}
+
+header nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  border: solid black;
+  font-family: inherit;
+}
+
+/* MAIN */
+
+main {
+  padding-top: 103px;
+}
+
+/* premier nav */
+
+.explorez {
+  color: #ff5e5e;
+}
+
+.rectangles {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+main .rectangles div {
+  border: solid black 1px;
+  border-radius: 15px;
+
+  padding: 15px;
+  height: 70px;
+  width: 150px;
+  margin-right: 15px;
+  justify-content: space-between;
+}
+
+main .rectangles div:not(:nth-child(7)) {
+  display: flex;
+}
+
+main nav:nth-child(2) div:last-child {
+  margin-right: 0px;
+}
+
+main nav:nth-child(2) div:hover {
+  background-color: black;
+  color: white;
+}
+
+/* section avec photos */
+.the-3-images {
+  display: flex;
+}
+
+.the-3-images .column-2 {
+  display: flex;
+  flex-direction: column;
+  height: 430px;
+  width: 50%;
+}
+.the-3-images .column-1 {
+  width: 50%;
+  height: 430px;
+  padding-right: 2px;
+}
+
+.the-3-images .column-1 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.the-3-images .column-2 img {
+  width: 100%;
+  height: calc(50% - 1px);
+  object-fit: cover;
+}
+.the-3-images .column-2 img:first-child {
+  margin-bottom: 2px;
+}
+
+.transparent:hover {
+  opacity: 0.8;
+}
+
+/* second nav sous les photos */
+
+.little-nav {
+  font-size: 13px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* seconde section, description de Paris */
+
+.ville-lumiere-rectangle {
+  display: flex;
+  margin-bottom: 60px;
+}
+.ville-lumiere {
+  width: 60%;
+}
+.description {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.rectangle-rouge {
+  background-color: #ff5e5e;
+  border-radius: 15px;
+  height: 440px;
+  margin-left: 50px;
+  width: 40%;
+}
+
+.rectangle-rouge .organiser {
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 200px;
+}
+
+.rectangle-rouge .map {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 210px;
+  width: 100%;
+}
+.rectangle-rouge .map img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.rectangle-rouge button {
+  background-color: black;
+  color: white;
+  border: solid black;
+  border-radius: 20px;
+  font-family: inherit;
+}
+
+/* 3rd section : Paris : les immanquables */
+/* global structure */
+
+.divertir {
+  display: flex;
+}
+.divertir .first-p {
+  font-size: var(--geo-size);
+  color: var(--geo-color);
+  font-family: var(--geo-font);
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+
+.divertir .second-p {
+  font-size: var(--little-size);
+  color: var(--little-color);
+  font-family: "Trip Sans Reg", sans-serif;
+  font-weight: bold;
+}
+
+.divertir .description {
+  width: 200px;
+  padding-right: 50px;
+}
+
+/* details of carousel */
+.carousel::-webkit-scrollbar {
+  /* width: 0px; */
+  background: transparent;
+}
+.carousel {
+  width: 870px;
+  display: flex;
+  margin-left: 20px;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.carousel .block {
+  height: 350px;
+  width: 280px;
+
+  flex-shrink: 0;
+}
+
+.carousel .block:not(:last-child) {
+  margin-right: 16px;
+}
+
+.carousel .img {
+  width: 280px;
+  height: 205px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.carousel .img img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* details of the little images on the images of the carousel */
+
+.carousel .logo {
+  height: 45px;
+  width: 35px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.carousel .logo img {
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.carousel .white-circle {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* low parts of the carousel */
+
+.carousel .third-p {
+  font-family: "Trip Sans Med";
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.carousel .low-carousel i {
+  font-size: 13px;
+  color: #00aa6c;
+  margin-right: 2px;
+}
+
+.carousel .low-carousel span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.carousel .fourth-p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* section guide de voyageur */
+
+.guide {
+  margin-top: 30px;
+}
+
+.guide .structure {
+  margin-top: 30px;
+  display: flex;
+}
+
+.guide .structure .column {
+  width: 370px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide .structure .column:not(:last-child) {
+  margin-right: 16px;
+}
+
+.guide .structure .img {
+  height: 275px;
+}
+
+.guide .structure .img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.low-guide p:first-child {
+  margin-top: 10px;
+  font-family: "Trip Sans Med";
+  font-size: 18px;
+}
+
+.low-guide p:nth-child(2) {
+  margin-top: 5px;
+}
+
+.logo-guide {
+  height: 25px;
+  width: 25px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.logo-guide img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo-guide p {
+  display: flex;
+}
+
+.guide .bold {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* FOOTER */
+
+footer {
+  height: 156px;
+  width: 100%;
+  background-color: #faf1ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer img {
+  height: 42px;
+  width: 42px;
+  margin-right: 30px;
+}
+
+footer a {
+  color: #ff5e5e;
+  text-decoration: none;
+}
+/* HIDDEN */
+
+.hidden {
+  display: none;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1184px) {
+  /* general rules */
+
+  .center-header {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* under the header */
+
+  main .rectangles .hidden {
+    display: flex;
+  }
+  main .rectangles {
+    flex-wrap: wrap;
+  }
+  main .rectangles div {
+    padding: 15px;
+    height: 45px;
+    width: calc(25% - (45px / 4));
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .rectangles div:last-child {
+    margin-right: 0;
+  }
+  main .rectangles div:nth-child(4) {
+    margin-right: 0px;
+  }
+
+  /* the 3 images */
+
+  .the-3-images .column-1 {
+    width: 65%;
+  }
+  .the-3-images .column-2 {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* header */
+
+  header span {
+    display: none;
+  }
+
+  /* the 3 images */
+
+  .the-3-images .column-1 {
+    width: 70%;
+  }
+  .the-3-images .column-2 {
+    width: 30%;
+  }
+
+  /* paragraph and map */
+
+  .ville-lumiere-rectangle {
+    flex-direction: column;
+  }
+  .ville-lumiere {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .rectangle-rouge {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    height: 250px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .rectangle-rouge .map {
+    height: 100%;
+  }
+
+  .rectangle-rouge .map img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HEADER*/
+
+  header nav {
+    display: none;
+  }
+  header .hidden {
+    display: inherit;
+  }
+  .center-header {
+    justify-content: space-around;
+  }
+
+  /* rectangles */
+
+  main .rectangles div {
+    padding: 15px;
+    height: 45px;
+    width: calc(50% - (15px / 2));
+
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  main .rectangles div:not(:nth-child(odd)) {
+    margin-right: 0;
+  }
+
+  /* the 3 images */
+
+  .the-3-images .column-1 {
+    width: 100%;
+  }
+  .the-3-images .column-2 {
+    display: none;
+  }
+  .the-3-images {
+    margin-bottom: 20px;
+  }
+
+  /* little nav */
+
+  .little-nav {
+    display: none;
+  }
+
+  /* paragraph and map */
+
+  .rectangle-rouge {
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-between;
+  }
+
+  .rectangle-rouge .map {
+    height: 50%;
+    object-fit: cover;
+  }
+
+  .rectangle-rouge .map img {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  /* carousel */
+
+  .divertir {
+    flex-direction: column;
+  }
+  .divertir .description {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .divertir .carousel {
+    margin-left: 0;
+    width: 100%;
+  }
+}
