@@ -614,6 +614,19 @@ footer a {
     justify-content: space-around;
   }
 
+  /* MODAL */
+
+  .form {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* rectangles */
 
   main .rectangles div {
